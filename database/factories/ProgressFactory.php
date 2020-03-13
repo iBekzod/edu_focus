@@ -11,8 +11,8 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Progress::class, function (Faker $faker) {
     return [
 		"name" => $faker->name,
-		"score" => '',
-		"subject_id" => $faker->randomNumber(),
+		"score" => $faker->randomNumber(2, true),
+		"subject_id" => $faker->randomNumber(2, true),
 
     ];
 });

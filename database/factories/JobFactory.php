@@ -11,10 +11,10 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Job::class, function (Faker $faker) {
     return [
 		"name" => $faker->name,
-		"category" => '',
-		"picture" => '',
+		"category" => 'sdfsdfhh',
+		"picture" => 'sdfdfh',
 		"description" => $faker->realText(),
-		"salary" => $faker->randomNumber(),
+		"salary" => $faker->randomNumber(2, true),
 
     ];
 });

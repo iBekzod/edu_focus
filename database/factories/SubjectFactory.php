@@ -10,10 +10,10 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\Subject::class, function (Faker $faker) {
     return [
-		"category" => '',
+		"category" => 'stutttent',
 		"name" => $faker->name,
 		"photo" => $faker->imageUrl(),
-		"ISBN" => '',
+		"ISBN" => 'dfhdfghdfgjfdgjfgj',
 
     ];
 });
