@@ -48,7 +48,7 @@ class multiple_commands extends Command
             Artisan::call('laracrud:route '.$model.'Controller');
         }*/
         foreach ($models as $model){
-            Artisan::call('laracrud:test '.$model.'Controller');
+            Artisan::call('laracrud:factory '.$model);
         }
     }
 }

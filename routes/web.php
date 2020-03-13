@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('laracrud.layouts.app');
 });
 Route::resource('users','UserController');
 
@@ -42,3 +42,11 @@ Route::resource('subjects','SubjectController');
 
 Route::resource('tasks','TaskController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
