@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90d71cb320e8801a93cbe78c99e4397b",
+    "content-hash": "f1a65255e3492476d1734eb423a572d8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -93,22 +93,22 @@
         },
         {
             "name": "digitaldream/laracrud",
-            "version": "3.4.1",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/digitaldreams/laracrud.git",
-                "reference": "40c01615148c322cd24fd4e328e5c33fb0920866"
+                "reference": "2353135b833c9990887ab88f7f46f0a089cdb745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/digitaldreams/laracrud/zipball/40c01615148c322cd24fd4e328e5c33fb0920866",
-                "reference": "40c01615148c322cd24fd4e328e5c33fb0920866",
+                "url": "https://api.github.com/repos/digitaldreams/laracrud/zipball/2353135b833c9990887ab88f7f46f0a089cdb745",
+                "reference": "2353135b833c9990887ab88f7f46f0a089cdb745",
                 "shasum": ""
             },
             "require": {
                 "digitaldream/dbreader": "~1.0",
-                "laravel/framework": ">=5.2",
-                "php": ">=5.5.9"
+                "laravel/framework": ">=5.5",
+                "php": ">=7.0.0"
             },
             "suggest": {
                 "dingo/api": "To make API",
@@ -141,7 +141,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "CRUD means CREATE, READ, UPDATE AND DELTE are common work in almost every web application. Laravel has also CRUD. We use Model, View, Controller, Request, Route's for CRUD. A well structured database are the blueprint of a web application. So We can create Model, View, Controller, Request from a database table",
+            "description": "Do you have a well structed database and you want to make a Laravel Application on top of it. By using this tools you can generate Models which have necessary methods and property, Request class with rules, generate route from controllers method and its parameter and full features form with validation error message and more with a single line of command",
             "homepage": "https://github.com/digitaldreams/laracrud",
             "keywords": [
                 "code generator",
@@ -149,7 +149,7 @@
                 "laravel",
                 "laravel code generator"
             ],
-            "time": "2019-02-24T16:29:55+00:00"
+            "time": "2020-01-20T09:31:39+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

@@ -15,7 +15,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "php-ai/php-ml": "^0.8.0",
-        "digitaldream/laracrud": "3.*"
+        "digitaldream/laracrud": "4.*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
