@@ -3,10 +3,10 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-
+use Illuminate\Support\Facades\Artisan;
 class multiple_commands extends Command
 {
-    protected $signature = 'execute:commands';
+    protected $signature = 'execute:mvc';
 
     /**
      * The console command description.
@@ -32,38 +32,23 @@ class multiple_commands extends Command
      */
     public function handle()
     {
-        $tabels=["jobs", 'statuses', 'students', 'learningmethods', 'organizations', 'parents', 'professors', 'progress'
+        /*
+        $tabels=['users', 'jobs', 'statuses', 'students', 'learningmethods', 'organizations', 'studentparents', 'professors', 'progress'
         ,'roles', 'scores', 'subjects', 'tasks'];
-
-        foreach ($tabels as $tabel){
+        */
+        /*foreach ($tabels as $tabel){
             Artisan::call('laracrud:mvc', [
                 'table'=>$tabel
             ]);
-        }
-        /*$models=['Job', 'Award', 'Message', 'Photo', 'Service', 'Partner', 'Status', 'Employer', 'Staff',
-            'Link', 'Feedback', 'Skill', 'Person', 'Project', 'SocialLink','ProjectStatus','Customer',
-            'Company', 'Student', 'Education', 'WorkExperience', 'Blog', 'Jurist', 'Membership', 'Comment',
-            'Teacher', 'Training', 'Faq', 'Course'];
-        foreach ($models as $model){
-            Artisan::call('laracrud:factory', [
-                'model'=>$model
-            ]);
-        }*/
-        //Controller
-        /*$models=['Job', 'Award', 'Message', 'Photo', 'Service', 'Partner', 'Status', 'Employer', 'Staff',
-            'Link', 'Feedback', 'Skill', 'Person', 'Project', 'SocialLink','ProjectStatus','Customer',
-            'Company', 'Student', 'Education', 'WorkExperience', 'Blog', 'Jurist', 'Membership', 'Comment',
-            'Teacher', 'Training', 'Faq', 'Course'];
-        foreach ($models as $model){
-            Artisan::call('make:controller '.$model.'Controller --resource ');
         }*/
         //Route
-        /*$models=['Job', 'Award', 'Message', 'Photo', 'Service', 'Partner', 'Status', 'Employer', 'Staff',
-            'Link', 'Feedback', 'Skill', 'Person', 'Project', 'SocialLink','ProjectStatus','Customer',
-            'Company', 'Student', 'Education', 'WorkExperience', 'Blog', 'Jurist', 'Membership', 'Comment',
-            'Teacher', 'Training', 'Faq', 'Course'];
-        foreach ($models as $model){
+        $models=['User', 'Job', 'Status', 'Student', 'Learningmethod', 'Organization', 'Studentparent', 'Professor', 'Progress'
+            ,'Role', 'Score', 'Subject', 'Task'];
+        /*foreach ($models as $model){
             Artisan::call('laracrud:route '.$model.'Controller');
         }*/
+        foreach ($models as $model){
+            Artisan::call('laracrud:test '.$model.'Controller');
+        }
     }
 }

@@ -16,3 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('users','UserController');
+
+Route::resource('jobs','JobController');
+
+Route::resource('statuses','StatusController');
+
+Route::resource('students','StudentController');
+
+Route::resource('learningmethods','LearningmethodController');
+
+Route::resource('organizations','OrganizationController');
+
+Route::resource('studentparents','StudentparentController');
+
+Route::resource('professors','ProfessorController');
+
+Route::resource('progresses','ProgressController');
+
+Route::resource('roles','RoleController');
+
+Route::resource('scores','ScoreController');
+
+Route::resource('subjects','SubjectController');
+
+Route::resource('tasks','TaskController');
+
