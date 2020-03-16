@@ -41,6 +41,30 @@ class CreateUsersTable extends Migration
                 'email_verified_at'=>'2020-03-14 00:00:00'
             )
         );
+        DB::table('users')->insert(
+            array(
+                'name' => 'Shakhzod',
+                'password' =>bcrypt('shakhzod12345'),
+                'email'=>'shakhzod@gmail.com',
+                'email_verified_at'=>'2020-03-14 00:00:00'
+            )
+        );
+        DB::table('users')->insert(
+            array(
+                'name' => 'Zilola',
+                'password' =>bcrypt('zilola12345'),
+                'email'=>'zilola@gmail.com',
+                'email_verified_at'=>'2020-03-14 00:00:00'
+            )
+        );
+        DB::table('users')->insert(
+            array(
+                'name' => 'Ulugbek',
+                'password' =>bcrypt('ulugbek12345'),
+                'email'=>'ulugbek@gmail.com',
+                'email_verified_at'=>'2020-03-14 00:00:00'
+            )
+        );
     }
 
     /**

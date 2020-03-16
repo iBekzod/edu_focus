@@ -6,7 +6,7 @@
     <title>{{config('app.name')}}</title>
     <link rel="stylesheet" href="{{asset('laracrud/css/bulma.css')}}">
     <link href="{{ asset('laracrud/css/font-awesome.min.css') }}" rel="stylesheet">
-    @yield('styles')
+    @section('styles')
 </head>
 <body>
 <section class="section">
@@ -26,16 +26,14 @@
                                         <span>Home</span>
                                     </a>
                                 </li>
-
-                                @yield('breadcrumb')
-
+                                @section('breadcrumb')
                             </ul>
                         </nav>
                     </div>
 
                 </div>
                 <div class="navbar-end">
-                    @yield('tools')
+                    @section('tools')
                 </div>
             </div>
         </div>
@@ -43,7 +41,7 @@
     </div>
 
     <div class="container">
-        @yield('content')
+        @section('content')
     </div>
 
     <footer class="footer">
@@ -82,6 +80,6 @@
         }
     });
 </script>
-@yield('scripts')
+@section('scripts')
 </body>
 </html>

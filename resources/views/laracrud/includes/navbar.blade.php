@@ -28,19 +28,38 @@
                            href="{{ route('register') }}"><span>Register</span></a>
                     </li>
                 @else
+
+
+                    @if(isset($enableSearch) && $enableSearch==true)
+                        <form class="form-inline" name="searchForm" id="searchForm">
+                            <input class="form-control mx-sm-2 form-control-sm" name="q" value="{{request('q')}}"
+                                   type="text"
+                                   placeholder="Search">
+                            <button class="btn btn-outline-secondary btn-sm my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    @endif
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown" role="button"
                            aria-expanded="false">
-                           Your Name
-                            (Your Role)
+                            Admin Routes
                             <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu p-3 pt-0" role="menu">
-
-                            <li class="py-1">
-                                <a href="#"><i class="fa fa-file-o"></i> Your Route</a>
-                            </li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('jobs.index') }}">  <span>Jobs</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('learningmethods.index') }}">  <span>Learnign Methods</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('organizations.index') }}">  <span>Organizations</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('professors.index') }}">  <span>Professors</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('progress.index') }}">  <span>Progress</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('roles.index') }}">  <span>Roles</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('scores.index') }}">  <span>Scores</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('statuses.index') }}">  <span>Statuses</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('students.index') }}">  <span>Students</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('studentparents.index') }}">  <span>Parents</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('subjects.index') }}">  <span>Subjects</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('tasks.index') }}">  <span>Tasks</span></a></li>
+                            <li class="py-1">  <a class="fa fa-file-o" href="{{ route('users.index') }}">  <span>Users</span></a></li>
 
                             <li class="dropdown-divider"></li>
                             <li class="py-1">
@@ -57,14 +76,6 @@
                             </li>
                         </ul>
                     </li>
-                    @if(isset($enableSearch) && $enableSearch==true)
-                        <form class="form-inline" name="searchForm" id="searchForm">
-                            <input class="form-control mx-sm-2 form-control-sm" name="q" value="{{request('q')}}"
-                                   type="text"
-                                   placeholder="Search">
-                            <button class="btn btn-outline-secondary btn-sm my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    @endif
                 @endif
             </ul>
         </div>

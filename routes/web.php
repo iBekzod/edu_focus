@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('laracrud.layouts.app');
-});
+});*/
+
+Route::get('/', 'JobController@index')->name('index');
+
 Route::resource('users','UserController');
 
 Route::resource('jobs','JobController');
@@ -33,7 +36,7 @@ Route::resource('studentparents','StudentparentController');
 
 Route::resource('professors','ProfessorController');
 
-Route::resource('progresses','ProgressController');
+Route::resource('progress','ProgressController');
 
 Route::resource('roles','RoleController');
 
